@@ -103,9 +103,9 @@ def ProcessLog(log, result_dic, log_dic):
     print 'log row: ', log.Row
     for i in range(1, log.Row):
         task_id = log.GetValue(i, 8)
-        if task_id not in result_dic.keys():
+        if task_id not in result_dic:
             continue
-        if task_id not in log_dic.keys():
+        if task_id not in log_dic:
             log_dic[task_id] = []
         value = []
         value.extend(result_dic[task_id])
